@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="saat" style="display: inline-block;">saat:</div>
+    <div id="dakika" style="display: inline-block;">dakika:</div>
+    <div id="saniye" style="display: inline-block;">saniye</div> <br> <br>
+
+    <div id="date" style="display: inline-block;">tarih</div>    
+    <script>
+        saat = () => {
+        var zaman     = new Date();
+        var saat      = zaman.getHours();
+        var dakika    = zaman.getMinutes();
+        var saniye    = zaman.getSeconds();
+
+        var yil = zaman.getFullYear();
+        var ay = zaman.getMonth() +1;
+        var gun = zaman.getDate();
+
+            if (saat < 10) {
+                document.getElementById("saat").innerHTML = "0" + saat + ":";
+            }
+            else {
+                document.getElementById("saat").innerHTML = saat + ":";
+            }
+            // --------
+            if(dakika < 10) {
+                document.getElementById("dakika").innerHTML = "0" + dakika + ":";
+            }
+            else {
+                document.getElementById("dakika").innerHTML = dakika + ":";
+            }
+            // ---------
+            if(saniye < 10) {
+                documen.getElementById("saniye").innerHTML = "0" + saniye;
+            }
+            else {
+                document.getElementById("saniye").innerHTML = saniye;
+            }
+            document.getElementById("date").innerHTML = gun + "/" + yil + "/" + zaman;
+        }
+
+        setInterval(function(){saat();},1000);
+
+        </script>
+</body>
+</html>

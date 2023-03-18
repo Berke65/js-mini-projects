@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taş - Kağıt - Makas Oyunu</title>
+</head>
+<body>
+    <h5>Taş - Kağıt - Makas Oyunu</h5>
+
+    <button onclick="secim('Taş')">Taş</button>
+    <button onclick="secim('Kağıt')">Kağıt</button>
+    <button onclick="secim('Makas')">Makas</button>
+    <div id="sonuc"></div> <br>
+    <div id="skorben" style="display: inline-block;">skor 0 -</div>
+    <div id="skorpc" style="display: inline-block;"> 0 (3 olan kazanır basarilar)</div>
+    <script>
+        var sayacben  =0;
+        var sayacpc   =0;
+        secim = (secim) => {
+            var sonuc = document.getElementById("sonuc");
+            var pc = bilgisayar();
+            
+            if(secim == pc) {
+                sonuc.innerText = "Seçimleriniz Aynı Puan yok. ";
+            }
+            else if(secim == "Taş" && pc == "Kağıt") {
+               sonuc.innerText = " Kaybettiniz Bilgisayar 1 Puan Kazandı. "; sayacpc++ ;
+            }
+            else if (secim == "Taş" && pc == "Makas") {
+               sonuc.innerText = "1 Puan Kazandınız. "; sayacben++ ;
+            }
+            else if (secim == "Kağıt" && pc == "Taş") {
+               sonuc.innerText = "1 Puan Kazandınız. "; sayacben++ ;
+            }
+            else if (secim == "Kağıt" && pc == "Makas") {
+               sonuc.innerText = "Kaybettiniz Bilgisayar 1 Puan Kazandı. "; sayacpc++ ;
+            }
+            else if (secim == "Makas" && pc == "Taş") {
+               sonuc.innerText = "Kaybettiniz Bilgisayar 1 Puan Kazandı. "; sayacpc++ ;
+            }
+            else if (secim == "Makas" && pc == "Kağıt") {
+               sonuc.innerText = "1 Puan Kazandınız."; sayacben++ ;
+            }
+            document.getElementById("skorben").innerHTML = "ben: " + sayacben;
+            document.getElementById("skorpc").innerHTML = "vs" + sayacpc + " pc";
+
+            if (sayacben == 3) {alert("kazandınız tebrikler tekrar oynamak icin lütfen sayfayı yenileyin.")}
+            else if (sayacpc == 3) {alert("üzgünüz kaybettiniz tekrar oynamak icin lütfen sayfayı yenileyin.")}
+        }
+        bilgisayar = () => {
+            var dizi = ["Taş" , "Kağıt" , "Makas"];
+            var sayi = Math.floor(Math.random() * 2);
+            return dizi[sayi];
+        }
+    </script>
+</body>
+</html>

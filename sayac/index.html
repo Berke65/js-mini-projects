@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Büyük Sayı Bulma Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 style="text-align: center;">Sayaç</h1>
+<p id="sayaac" style="text-align: center;">0</p>    
+<div class="butonlar" style="text-align: center;">
+    <button onclick="arttır()">Arttır</button>
+    <button onclick="azalt()">Azalt</button>
+    <button onclick="sifirla()">Sıfırla</button>
+</div>
+<script>
+    var sayac = document.getElementById("sayaac");
+    var sayac = 0;
+    arttır = () => {
+        sayac++;
+        document.getElementById("sayaac").innerText = sayac;
+    }
+    azalt = () => {
+        sayac--;
+        document.getElementById("sayaac").innerText = sayac;
+    }
+    sifirla = () => {
+        sayac = 0;
+        document.getElementById("sayaac").innerText = sayac;
+    }
+    </script>
+</body>
+</html>
