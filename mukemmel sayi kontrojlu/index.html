@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mükemmel Sayi Kontrolü</title>
+</head>
+<body>
+    <h5>Mükkemel Sayi Kontrolü</h5>
+    Lütfen bir sayi giriniz: <input type="text" id="sayi">
+    <button onclick="hesapla()">hesapla</button>
+    <script>
+        // kendisi haric poz bölenlerinin toplamı kendisine esit olan sayilara mükemmel sayi denir.
+        hesapla = () => {
+            var sayi = document.getElementById("sayi").value;
+            var pozbolen =0;
+            for(var i=1; i<sayi ; i++)
+            {
+                if(sayi % i == 0) {pozbolen += i}
+            }
+            if(sayi == pozbolen) {alert("girdiginiz sayi bir mükemmel sayidir.");}
+            else {alert("girdiginiz sayi bir mükemmel sayi degildir.");}
+        }
+    </script>
+</body>
+</html>

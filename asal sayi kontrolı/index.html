@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asal Sayı Kontrolü</title>
+</head>
+<body>
+    <h5>Asal Sayı Kontrolü</h5>
+    Lütfen bir sayi giriniz: <input type="text" id="sayi">
+    <button onclick="hesapla()">hesapla</button>
+    <div class="sonuc"></div> <br>
+    <script>
+        hesapla = () => {
+            var sayi = document.getElementById("sayi").value;
+            var pozbolen =0;
+            for(var i = 2; i<sayi; i++)
+            {
+                if(sayi % i == 0) {pozbolen += i}
+            }
+            if(pozbolen == 0)
+            {
+                document.querySelector(".sonuc").innerHTML = "sayi asaldir.";
+            } 
+            else
+            {
+                document.querySelector(".sonuc").innerHTML = "sayi asal degildir.";
+            }
+            if(sayi == 1)
+            {
+                document.querySelector(".sonuc").innerHTML = "sayi asal degildir.";
+            }
+        }
+    </script>
+</body>
+</html>
