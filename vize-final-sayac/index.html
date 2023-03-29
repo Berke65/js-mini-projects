@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vize - final - sayac</title>
+    <script>
+        var sayac = 0;
+        ort = () => { 
+        var vize = parseInt(document.form.vize.value);
+        var final = parseInt(document.form.final.value);
+        document.form.ortalama.value = (vize*0.4) + (final*0.6);
+        sayac++;
+        document.form.sayac.value = sayac;
+        
+}
+    </script>
+</head>
+<body>
+    
+    <form name="form" style="text-align: center; margin-top: 2%;">
+        vize: <input type="text" name="vize" maxlength="20" size="20">
+        final: <input type="text" name="final" maxlength="20" size="20">
+        ortalama: <input type="text" name="ortalama" maxlength="20" size="20">
+        sayac: <input type="text" name="sayac" maxlength="20" size="20"> <br> <br> <br>
+        <input type="button" value="ortalama hesapla" onclick="ort()">
+    </form>
+
+</body>
+</html>
