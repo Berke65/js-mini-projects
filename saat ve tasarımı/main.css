@@ -1,0 +1,51 @@
+body{
+    background-color: #424242;
+    color:#fff;
+}
+#clock{
+    text-align: center;
+    width: 50%;
+    position: absolute; /* normal akısdan cıkarak kendine en yakın relative elemana göre kendini konumlandırır. */
+    top: 30%;
+    left: 30%;
+}
+#clock h2{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+}
+.clock-container {
+    display: flex; /* esneklil kazanır ve daha kolay yerlesebilir hale gelir. */
+    flex-direction: row; /* flex-direction: row ile item'lar sırasıyla soldan sağa hizalanır. flex-direction tanımı mevcut değilse ön tanımlı olarak row temel alınır. row-reverse ise item'ların sağa dayalı ve sağdan sola hizalanmasını sağlar. column item'ların yatay yerine dikey olarak hizalanmasını ve yukarıdan aşağıya sıralanmasını sağlar.*/
+    flex-wrap: nowrap; /* flex-wrap. Varsayılan olarak esnek öğeler tek bir satıra sığmaya çalışırlar. Gerektiğinde birden fazla satıra yaymak için bu özelliği kullanabilirsiniz. nowrap (varsayılan) = Tüm öğeleri tek bir satıda yan yana listeler. */
+    justify-content: normal; /* ana eksene göre hizalama yaptığı için esnek yönü column olan bir kapsayıcı içerisinde öğeleri main-axis olan yazı yazma yönüne dik olan blok-eksenine göre hizalayacaktır. */
+    align-items: normal; /* dikey hizalama */
+    align-content: normal; /* dikey hizalama */
+  }
+  .clock-items{
+      width: 32%;
+      background-color: #fff;
+      color:#000;
+      border-radius: 10px;
+      text-align: center;
+      margin-right: 3%;
+      padding-top:30px;
+      padding-bottom: 30px;
+      font-size: 70px;
+      letter-spacing: 5px;
+      font-family: 'Orbitron', sans-serif;
+
+
+  }
+  .clock-items p{
+      margin:0;
+      padding:0;
+      border-radius: 5px;;
+  }
+  p{
+      text-align: center;
+  }
+  #date{
+      font-size: 20px;
+      font-family: 'Bebas Neue', cursive;
+  }
+  
