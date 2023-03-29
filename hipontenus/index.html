@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hipo hesaplama</h1>
+    <form name="form">
+        kenar1: <input type="text" name="kenar1" size="20" maxlength="20"> <br>
+        kenar2: <input type="text" name="kenar2" size="20" maxlength="20">
+        <input type="button" value="hesapla" onclick="hipo()"> <br>
+        
+        Hipotenus:     <p id="sonuc" style="display: inline-block;">sonuc burada gözükecek</p>    
+    
+    </form>
+
+    <script>
+        hipo = () => {
+            var kenar1 = document.form.kenar1.value;
+            var kenar2 = document.form.kenar2.value;
+            var sonuc = Math.sqrt((kenar1 * kenar1) + (kenar2 * kenar2));
+            document.getElementById("sonuc").innerText = sonuc;
+        }
+    </script>
+
+</body>
+</html>
