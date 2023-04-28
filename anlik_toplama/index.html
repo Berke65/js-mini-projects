@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anlık Toplama Denemesi</title>
+    <script>
+        deneme = () => {
+            var sayi1 = Number(document.form.sayi1.value); 
+            var sayi2 = Number(document.form.sayi2.value); // vizeler bitti geri geldim :)
+            var sonuc = sayi1 * sayi2;
+            document.querySelector("#sonuc").innerHTML = sonuc;
+        }
+    </script>
+</head>
+<body>
+    <fieldset style="margin-top: 30px;"> <legend align = "center">Anlık Toplama</legend>
+    <form name="form" align = "center" style="margin-top: 30px;">
+        1.Sayi: <input type="text" name="sayi1" oninput="deneme()"> <br>
+        2.Sayi: <input type="text" name="sayi2" oninput="deneme()">
+        <h4 id="sonuc">sonuc burada gözükecek</h4>
+    </form>
+    </fieldset>
+</body>
+</html>
