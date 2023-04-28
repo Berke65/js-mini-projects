@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arka Plan Renk Değişimi</title>
+    <script>
+        renk_degis = (renk) => {
+            switch (renk)
+            {
+                case "black":
+                    deneme="black";
+                break;
+                case "green":
+                    deneme="green";
+                break;
+                case "blue":
+                    deneme="blue";
+                break;
+                case "red":
+                    deneme="red";
+                break;
+                case "yellow":
+                    deneme="yellow";
+                break;
+                case "orange":
+                    deneme="orange";
+                break;
+                case "white":
+                    deneme="white";
+            }
+            document.body.style.backgroundColor = deneme;
+        }
+    </script>
+</head>
+<body style="background-color: 'deneme' ;" align = "center">
+
+    <input type="button" name="black" value="siyah" onmouseover="renk_degis('black')">
+    <input type="button" name="green" value="yesil" onmouseover="renk_degis('green')">
+    <input type="button" name="blue" value="mavi" onmouseover="renk_degis('blue')">
+    <input type="button" name="red" value="kirmizi" onmouseover="renk_degis('red')">
+    <input type="button" name="yellow" value="sari" onmouseover="renk_degis('yellow')">
+    <input type="button" name="orange" value="turuncu" onmouseover="renk_degis('orange')">
+    <input type="button" name="white" value="beyaz" onmouseover="renk_degis('white')">
+    
+</body>
+</html>
