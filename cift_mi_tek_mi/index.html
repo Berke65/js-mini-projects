@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çift Mi Tek Mi</title>
+    <script>
+        check = () => {
+        var sayi = document.getElementById("sayi").value;
+        if (sayi % 2 == 0)
+        document.getElementById("sonuc").innerHTML = "sayi cifttir";
+        else if (sayi % 2 == 1)
+        document.getElementById("sonuc").innerHTML = "sayi tektir";
+        else
+        document.getElementById("sonuc").innerHTML = "lütfen gecerli bir sayi giriniz";
+    } // kolaydı ama gecmek istemedim örnek örnektir
+    </script>
+</head>
+<body>
+
+    Lüten Bir Sayi Giriniz: <input type="text" id="sayi"> <button onclick="check()">kontrol et</button>
+    <h4 id="sonuc">sonuc</h4>
+</body>
+</html>
