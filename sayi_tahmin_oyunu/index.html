@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayi Tahmin Oyunu</title>
+    <script>
+        var rsayi;
+        var tahmin;
+        var hak = 6;
+        var btn;
+
+        game = () => {
+           rsayi = Math.round(Math.random() * 100);
+           alert("basladi");
+        }
+        
+        guess = () => {
+            tahmin = parseInt(document.getElementById("abc").value);
+            if(rsayi == tahmin)
+            {
+                window.alert("Tebrikler Bildiniz :)");
+                btn = document.getElementById("btn");
+                btn.disabled = true;
+            }
+            else if(tahmin > rsayi)
+            {
+                window.alert("Lütfen Daha Küçük Bir Değer Yaziniz!");
+                hak--;
+                document.getElementById("hak").innerHTML = hak;
+            }
+            else if(tahmin < rsayi)
+            {
+                window.alert("Lütfen Daha Büyük Bir Değer Yaziniz!");
+                hak--;
+                document.getElementById("hak").innerHTML = hak;
+            }
+            if(hak == 0)
+            {
+                window.alert("üzgünüz hakkınz bitti" + "bilemediğiniz değer: " + rsayi + " yeniden başla butonuna basın");
+                btn = document.getElementById("btn");
+                btn.disabled = true;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <button onclick="game()">baslamak icin tiklayiniz</button> <br> <br>
+    Tahmin: <input type="text" id="abc" placeholder="0 - 100 arasi">
+    <button onclick="guess()" id="btn">tahmin et</button> 
+    <button onclick="location.reload()">Yeniden Başla</button> <br>
+    kalan hakkınız: <h4 id="hak" style="display: inline-block;">6</h4>
+</body>
+</html>
